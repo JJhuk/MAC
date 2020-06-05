@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <stdlib.h>
 
 //명령어들
 typedef enum {
@@ -29,13 +30,15 @@ typedef enum {
 	NUM_OF_REGISTERS
 } Registers;
 
-const int program[] = {
-	PSH, 5,
-	PSH, 6,
-	ADD,
-	POP,
-	HLT
-};
+// const int program[] = {
+// 	PSH, 5,
+// 	PSH, 6,
+// 	ADD,
+// 	POP,
+// 	HLT
+// };
+
+int* program;
 
 //instruction pointer
 int ip = 0;
@@ -96,30 +99,58 @@ void eval(int instr)
 			stack[sp] = registers[C];
 			break;
 		case MOV:
-			registers[program[++ip]] = registers[program[++ip]];
+			int a = program[++ip];
+			int b = program[++ip];
+			registers[b] = registers[a];
 			break;		
 		case SET:
-			registers[]
+			int idx = program[++ip];
+			int val = program[++ip];
+			registers[idx] = val;
 			break;
 		case LOG:
+			printf("%d\n",program[++ip]);
 			break;
 		case IF:
+			int idx = program[++ip];
+			if(registers[idx] == program[++ip])
+			{
+				ip = program[++ip];
+			}
+			else
+			{
+				++ip;
+			}
 			break;
 		case IFN:
+			int idx = program[++ip];
+			if(registers[idx] != program[++ip])
+			{
+				ip = program[++ip];
+			}
+			else
+			{
+				++ip;
+			}
 			break;
 		case GLD:
+			stack[++sp] = registres[program[++ip]];
 			break;
 		case GPT:
-			sp++;
-			stack[sp] 
+			int idx = program[++ip];
+			registers[idx] = stack[sp];
 			break;
 		case NOP:
 			break;
 	}
 }
 
-int main()
+int main(int argc, char **argv)
 {
+
+	FILE *file = fopen(argc[1],"r");
+	assert(file != NULL);
+
 	while(running)
 	{
 		eval(fetch());
