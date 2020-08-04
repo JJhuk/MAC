@@ -1,8 +1,3 @@
-# C 프로그래밍 2 project2
-
-Created: Jun 27, 2020 4:03 PM
-Status: In Progress
-
 # Virtual Machine in C
 
 ## 1. 실행 방법
