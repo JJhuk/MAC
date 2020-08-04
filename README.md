@@ -90,8 +90,7 @@ NOP  15 -- nop               아무것도 안함.
 
 ### Result
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5544bb58-40b4-4aac-8256-1cf336caf078/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5544bb58-40b4-4aac-8256-1cf336caf078/Untitled.png)
-
+![1](https://user-images.githubusercontent.com/31194565/89273498-95744280-d67a-11ea-8700-ae1d834392f3.png)
 ### 2. 3. 2. TestCase 2 (5 + 1 , if문 작동 확인)
 
 ---
@@ -112,6 +111,6 @@ NOP  15 -- nop               아무것도 안함.
 
 ### Result
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bb6fb910-1639-4a85-b854-e642be0149f4/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bb6fb910-1639-4a85-b854-e642be0149f4/Untitled.png)
+![2](https://user-images.githubusercontent.com/31194565/89273503-986f3300-d67a-11ea-97a8-e034d1240d9c.png)
 
 Base : [https://felixangell.com/blogs/virtual-machine-in-c](https://felixangell.com/blogs/virtual-machine-in-c)
